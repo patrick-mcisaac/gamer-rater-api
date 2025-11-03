@@ -3,6 +3,12 @@ Table Player {
     
 }
 
+Table PlayerGames {
+    id int [pk, increment]
+    player_id int [ref: > Player.id]
+    game_id int [ref: > Game.id]
+}
+
 Table Game {
     id int [pk, increment]
     title varchar
@@ -21,8 +27,8 @@ Table Category {
 
 Table GameCategory {
     id int [pk, increment]
-    category_id int [ref: > Category.id]
     game_id int [ref: > Game.id]
+    category_id int [ref: > Category.id]
 }
 
 Table Rating {
