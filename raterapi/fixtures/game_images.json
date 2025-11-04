@@ -1,0 +1,182 @@
+[
+	{
+		"model": "raterapi.GameImage",
+		"pk": 1,
+		"fields": {
+			"image": "images/catan_box.jpg",
+			"game": 1,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 2,
+		"fields": {
+			"image": "images/catan_gameplay.jpg",
+			"game": 1,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 3,
+		"fields": {
+			"image": "images/ticket_to_ride_box.jpg",
+			"game": 2,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 4,
+		"fields": {
+			"image": "images/ticket_to_ride_board.jpg",
+			"game": 2,
+			"user": 4
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 5,
+		"fields": {
+			"image": "images/dnd_starter_set.jpg",
+			"game": 3,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 6,
+		"fields": {
+			"image": "images/dnd_dice.jpg",
+			"game": 3,
+			"user": 3
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 7,
+		"fields": {
+			"image": "images/pandemic_box.jpg",
+			"game": 4,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 8,
+		"fields": {
+			"image": "images/pandemic_board_setup.jpg",
+			"game": 4,
+			"user": 5
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 9,
+		"fields": {
+			"image": "images/dominion_box.jpg",
+			"game": 5,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 10,
+		"fields": {
+			"image": "images/dominion_cards.jpg",
+			"game": 5,
+			"user": 3
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 11,
+		"fields": {
+			"image": "images/warhammer_40k_box.jpg",
+			"game": 6,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 12,
+		"fields": {
+			"image": "images/warhammer_miniatures.jpg",
+			"game": 6,
+			"user": 5
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 13,
+		"fields": {
+			"image": "images/king_of_tokyo_box.jpg",
+			"game": 7,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 14,
+		"fields": {
+			"image": "images/king_of_tokyo_monsters.jpg",
+			"game": 7,
+			"user": 3
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 15,
+		"fields": {
+			"image": "images/codenames_box.jpg",
+			"game": 8,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 16,
+		"fields": {
+			"image": "images/codenames_cards.jpg",
+			"game": 8,
+			"user": 5
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 17,
+		"fields": {
+			"image": "images/blood_bowl_box.jpg",
+			"game": 9,
+			"user": 3
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 18,
+		"fields": {
+			"image": "images/blood_bowl_field.jpg",
+			"game": 9,
+			"user": 4
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 19,
+		"fields": {
+			"image": "images/gloomhaven_box.jpg",
+			"game": 10,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.GameImage",
+		"pk": 20,
+		"fields": {
+			"image": "images/gloomhaven_components.jpg",
+			"game": 10,
+			"user": 4
+		}
+	}
+]

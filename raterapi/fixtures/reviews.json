@@ -1,0 +1,182 @@
+[
+	{
+		"model": "raterapi.Review",
+		"pk": 1,
+		"fields": {
+			"review": "Catan is a timeless classic! The trading mechanic keeps everyone engaged and the game never feels the same twice.",
+			"game": 1,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 2,
+		"fields": {
+			"review": "Great gateway game but can drag on a bit with analysis paralysis players. Still really enjoyable overall.",
+			"game": 1,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 3,
+		"fields": {
+			"review": "Ticket to Ride is perfect for family game night. Easy to learn, quick to play, and beautifully designed.",
+			"game": 2,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 4,
+		"fields": {
+			"review": "This game gets everyone to the table. The tension of blocking routes and completing tickets is so satisfying!",
+			"game": 2,
+			"user": 4
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 5,
+		"fields": {
+			"review": "D&D changed my life! The storytelling possibilities are endless and every session is an unforgettable adventure.",
+			"game": 3,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 6,
+		"fields": {
+			"review": "Best RPG ever made. The starter set is a perfect introduction for new players and the rules are more accessible than ever.",
+			"game": 3,
+			"user": 3
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 7,
+		"fields": {
+			"review": "Pandemic is the gold standard for cooperative games. Working together to stop diseases creates amazing moments of teamwork.",
+			"game": 4,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 8,
+		"fields": {
+			"review": "Intense and challenging! You really feel the pressure as outbreaks cascade. Great for players who like strategic puzzles.",
+			"game": 4,
+			"user": 5
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 9,
+		"fields": {
+			"review": "Dominion invented deck building and it's still one of the best. So many card combinations keep it fresh after hundreds of plays.",
+			"game": 5,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 10,
+		"fields": {
+			"review": "A brilliant game that's easy to teach but has tons of depth. The expansions add even more variety.",
+			"game": 5,
+			"user": 4
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 11,
+		"fields": {
+			"review": "Warhammer 40K is a hobby as much as a game. Painting the miniatures and building armies is incredibly rewarding.",
+			"game": 6,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 12,
+		"fields": {
+			"review": "The lore and tactical gameplay are unmatched. Expensive and time-consuming but absolutely worth it for dedicated fans.",
+			"game": 6,
+			"user": 5
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 13,
+		"fields": {
+			"review": "King of Tokyo is pure chaotic fun! Perfect party game with just enough strategy to keep things interesting.",
+			"game": 7,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 14,
+		"fields": {
+			"review": "My kids love this game! The monster theme and dice rolling make it exciting for all ages.",
+			"game": 7,
+			"user": 3
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 15,
+		"fields": {
+			"review": "Codenames is brilliant! The simple concept creates hilarious moments and clever wordplay. A must-have party game.",
+			"game": 8,
+			"user": 2
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 16,
+		"fields": {
+			"review": "Best word game out there. Works great with large groups and even non-gamers pick it up immediately.",
+			"game": 8,
+			"user": 5
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 17,
+		"fields": {
+			"review": "Blood Bowl combines my love of fantasy and football perfectly. The humor and brutal gameplay are fantastic.",
+			"game": 9,
+			"user": 3
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 18,
+		"fields": {
+			"review": "A unique sports game with incredible replay value. Building and developing your team over a season is so satisfying.",
+			"game": 9,
+			"user": 4
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 19,
+		"fields": {
+			"review": "Gloomhaven is an absolute masterpiece. The campaign is epic, the tactical combat is deep, and the legacy elements are amazing.",
+			"game": 10,
+			"user": 1
+		}
+	},
+	{
+		"model": "raterapi.Review",
+		"pk": 20,
+		"fields": {
+			"review": "Best board game I've ever played. Requires serious commitment but the payoff is incredible. Worth every hour invested.",
+			"game": 10,
+			"user": 4
+		}
+	}
+]

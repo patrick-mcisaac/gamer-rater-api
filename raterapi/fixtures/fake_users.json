@@ -1,0 +1,77 @@
+[
+	{
+		"model": "auth.User",
+		"pk": 1,
+		"fields": {
+			"username": "sarah_gamer",
+			"email": "sarah@example.com",
+			"password": "pbkdf2_sha256$600000$random_salt_1$hash1",
+			"first_name": "Sarah",
+			"last_name": "Johnson",
+			"is_staff": false,
+			"is_active": true,
+			"is_superuser": false,
+			"date_joined": "2023-01-15T10:30:00Z"
+		}
+	},
+	{
+		"model": "auth.User",
+		"pk": 2,
+		"fields": {
+			"username": "mike_board_master",
+			"email": "mike@example.com",
+			"password": "pbkdf2_sha256$600000$random_salt_2$hash2",
+			"first_name": "Mike",
+			"last_name": "Chen",
+			"is_staff": false,
+			"is_active": true,
+			"is_superuser": false,
+			"date_joined": "2023-02-20T14:45:00Z"
+		}
+	},
+	{
+		"model": "auth.User",
+		"pk": 3,
+		"fields": {
+			"username": "emma_dice_roller",
+			"email": "emma@example.com",
+			"password": "pbkdf2_sha256$600000$random_salt_3$hash3",
+			"first_name": "Emma",
+			"last_name": "Williams",
+			"is_staff": false,
+			"is_active": true,
+			"is_superuser": false,
+			"date_joined": "2023-03-10T09:15:00Z"
+		}
+	},
+	{
+		"model": "auth.User",
+		"pk": 4,
+		"fields": {
+			"username": "alex_strategist",
+			"email": "alex@example.com",
+			"password": "pbkdf2_sha256$600000$random_salt_4$hash4",
+			"first_name": "Alex",
+			"last_name": "Rodriguez",
+			"is_staff": false,
+			"is_active": true,
+			"is_superuser": false,
+			"date_joined": "2023-04-05T16:20:00Z"
+		}
+	},
+	{
+		"model": "auth.User",
+		"pk": 5,
+		"fields": {
+			"username": "jordan_tabletop",
+			"email": "jordan@example.com",
+			"password": "pbkdf2_sha256$600000$random_salt_5$hash5",
+			"first_name": "Jordan",
+			"last_name": "Taylor",
+			"is_staff": false,
+			"is_active": true,
+			"is_superuser": false,
+			"date_joined": "2023-05-12T11:00:00Z"
+		}
+	}
+]

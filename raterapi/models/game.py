@@ -19,3 +19,6 @@ class Game(models.Model):
     ratings = models.ManyToManyField(User, through="Rating", related_name="ratings")
     images = models.ManyToManyField(User, through="GameImage", related_name="images")
     reviews = models.ManyToManyField(User, through="Review", related_name="reviews")
+
+    def __str__(self):
+        return self.title
