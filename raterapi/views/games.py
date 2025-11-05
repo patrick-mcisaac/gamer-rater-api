@@ -19,6 +19,26 @@ class GameViewSet(ViewSet):
         except Game.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
 
+    def create(self, request):
+        try:
+            category = Category.objects.get(pk=request.data.get("categories"))
+
+            game = Game.objects.create(
+                title=request.data.get("title"),
+                description=request.data.get("description"),
+                designer=request.data.get("designer"),
+                year_released=request.data.get("year_released"),
+                number_of_players=request.data.get("number_of_players"),
+                estimated_time_to_play=request.data.get("estimated_time_to_play"),
+                age_recommendation=request.data.get("age_recommendation"),
+            )
+
+            game.categories.add(category)
+            serialized = GameSerializer(game, many=False, context={"request": request})
+            return Response(serialized.data, status=status.HTTP_201_CREATED)
+        except Exception as e:
+            return Response(e, status=status.HTTP_400_BAD_REQUEST)
+
 
 class GameCategoriesSerializer(serializers.ModelSerializer):
 
