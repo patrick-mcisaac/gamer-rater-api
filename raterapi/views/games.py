@@ -87,6 +87,7 @@ class GameSerializer(serializers.ModelSerializer):
             "player_games",
             "user",
             "is_creator",
+            "average_rating",
         ]
 
     def get_is_creator(self, obj):

@@ -27,5 +27,16 @@ class Game(models.Model):
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="games")
 
+    @property
+    def average_rating(self):
+        ratings = self.rated_game.all()
+
+        total_rating = 0
+        for rating in ratings:
+            total_rating += rating.rating
+
+        average_rating = total_rating / len(ratings)
+        return average_rating
+
     def __str__(self):
         return self.title
