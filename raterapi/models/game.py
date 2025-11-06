@@ -25,6 +25,7 @@ class Game(models.Model):
     reviews = models.ManyToManyField(
         User, through="Review", related_name="reviews", blank=True
     )
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="games")
 
     def __str__(self):
         return self.title

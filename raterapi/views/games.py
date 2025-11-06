@@ -8,13 +8,13 @@ class GameViewSet(ViewSet):
 
     def list(self, request):
         games = Game.objects.all()
-        serializer = GameSerializer(games, many=True)
+        serializer = GameSerializer(games, many=True, context={"request": request})
         return Response(serializer.data, status.HTTP_200_OK)
 
     def retrieve(self, request, pk=None):
         try:
             game = Game.objects.get(pk=pk)
-            serializer = GameSerializer(game, many=False)
+            serializer = GameSerializer(game, many=False, context={"request": request})
             return Response(serializer.data, status=status.HTTP_200_OK)
         except Game.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
@@ -22,6 +22,7 @@ class GameViewSet(ViewSet):
     def create(self, request):
         try:
             category = Category.objects.get(pk=request.data.get("categories"))
+            user = request.user
 
             game = Game.objects.create(
                 title=request.data.get("title"),
@@ -31,6 +32,7 @@ class GameViewSet(ViewSet):
                 number_of_players=request.data.get("number_of_players"),
                 estimated_time_to_play=request.data.get("estimated_time_to_play"),
                 age_recommendation=request.data.get("age_recommendation"),
+                user=user,
             )
 
             game.categories.add(category)
@@ -49,6 +51,7 @@ class GameCategoriesSerializer(serializers.ModelSerializer):
 
 class GameSerializer(serializers.ModelSerializer):
 
+    is_creator = serializers.SerializerMethodField()
     categories = GameCategoriesSerializer(many=True)
 
     class Meta:
@@ -64,4 +67,9 @@ class GameSerializer(serializers.ModelSerializer):
             "age_recommendation",
             "categories",
             "player_games",
+            "user",
+            "is_creator",
         ]
+
+    def get_is_creator(self, obj):
+        return self.context["request"].user == obj.user
