@@ -2,6 +2,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status, serializers
 from raterapi.models import Game, Category
+from django.contrib.auth.models import User
 
 
 class GameViewSet(ViewSet):
@@ -41,6 +42,23 @@ class GameViewSet(ViewSet):
         except Exception as e:
             return Response(e, status=status.HTTP_400_BAD_REQUEST)
 
+    def update(self, request, pk=None):
+        try:
+            game = Game.objects.get(pk=pk)
+
+            serialized = UpdateGameSerializer(game, data=request.data)
+
+            if serialized.is_valid():
+                serialized.save()
+
+                serialized = GameSerializer(
+                    game, many=False, context={"request": request}
+                )
+                return Response(serialized.data, status=status.HTTP_200_OK)
+            return Response(serialized.errors, status=status.HTTP_400_BAD_REQUEST)
+        except Game.DoesNotExist as e:
+            return Response(e, status=status.HTTP_404_NOT_FOUND)
+
 
 class GameCategoriesSerializer(serializers.ModelSerializer):
 
@@ -73,3 +91,45 @@ class GameSerializer(serializers.ModelSerializer):
 
     def get_is_creator(self, obj):
         return self.context["request"].user == obj.user
+
+
+class UpdateGameSerializer(serializers.ModelSerializer):
+    categories = serializers.PrimaryKeyRelatedField(
+        queryset=Category.objects.all(), many=False
+    )
+
+    class Meta:
+        model = Game
+        fields = [
+            "id",
+            "title",
+            "description",
+            "designer",
+            "year_released",
+            "number_of_players",
+            "estimated_time_to_play",
+            "age_recommendation",
+            "categories",
+        ]
+
+    def update(self, instance, validated_data):
+        categories_data = validated_data.pop("categories", None)
+        for key, value in validated_data.items():
+            setattr(instance, key, value)
+
+        if categories_data is not None:
+
+            instance.categories.set(categories_data)
+        instance.save()
+        return instance
+
+    def validate_categories(self, value):
+        if not isinstance(value, list):
+            return [value]
+        return value
+
+
+# class GameUserSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = User
+#         fields
