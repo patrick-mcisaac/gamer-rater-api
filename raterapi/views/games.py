@@ -10,6 +10,7 @@ class GameViewSet(ViewSet):
 
     def list(self, request):
         search_text = self.request.query_params.get("q", None)
+        sort_term = self.request.query_params.get("orderby", None)
 
         if search_text is not None:
             games = Game.objects.filter(
@@ -19,6 +20,14 @@ class GameViewSet(ViewSet):
             )
         else:
             games = Game.objects.all()
+
+        if sort_term is not None:
+            if sort_term == "time":
+                games = games.order_by("estimated_time_to_play")
+            elif sort_term == "designer":
+                games = games.order_by("designer")
+            elif sort_term == "year":
+                games = games.order_by("year_released")
         serializer = GameSerializer(games, many=True, context={"request": request})
         return Response(serializer.data, status.HTTP_200_OK)
 
