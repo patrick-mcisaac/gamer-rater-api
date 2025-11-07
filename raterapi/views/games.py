@@ -3,12 +3,22 @@ from rest_framework.response import Response
 from rest_framework import status, serializers
 from raterapi.models import Game, Category
 from django.contrib.auth.models import User
+from django.db.models import Q
 
 
 class GameViewSet(ViewSet):
 
     def list(self, request):
-        games = Game.objects.all()
+        search_text = self.request.query_params.get("q", None)
+
+        if search_text is not None:
+            games = Game.objects.filter(
+                Q(title__contains=search_text)
+                | Q(description__contains=search_text)
+                | Q(designer__contains=search_text)
+            )
+        else:
+            games = Game.objects.all()
         serializer = GameSerializer(games, many=True, context={"request": request})
         return Response(serializer.data, status.HTTP_200_OK)
 
