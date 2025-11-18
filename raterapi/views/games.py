@@ -1,9 +1,9 @@
+from django.db.models import Q
+from django.contrib.auth.models import User
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status, serializers
 from raterapi.models import Game, Category
-from django.contrib.auth.models import User
-from django.db.models import Q
 
 
 class GameViewSet(ViewSet):
@@ -147,9 +147,3 @@ class UpdateGameSerializer(serializers.ModelSerializer):
         if not isinstance(value, list):
             return [value]
         return value
-
-
-# class GameUserSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = User
-#         fields
